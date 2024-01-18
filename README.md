@@ -1,6 +1,12 @@
 # RequestTool
 
-## 介绍
+
+## 1.RequestTool 介绍
+
+- 正在规划一个新的客户端程序，用于调试Http请求和WebSocket请求
+- 该程序将会是一个独立的程序，也会是一个IDEA插件(可能) 
+
+## 2.RequestTool IDEA 插件介绍
 
 - 此仓库是 `IDEA` 插件 `RequestTool` 的反馈目录和教程目录
 - `RequestTool` 是一个简单调试的 Http 工具.
