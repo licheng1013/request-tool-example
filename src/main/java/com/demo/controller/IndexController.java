@@ -1,5 +1,8 @@
 package com.demo.controller;
 
+import com.demo.entity.R;
+import com.demo.entity.User;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,9 +20,11 @@ public class IndexController {
 
     @RequestMapping("/json")
     public Object json(String message) {
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("code", 0);
-        map.put("message", message);
-        return map;
+        return R.okData(message);
+    }
+
+    @RequestMapping("/one")
+    public Object user() {
+        return R.okData(User.of());
     }
 }
