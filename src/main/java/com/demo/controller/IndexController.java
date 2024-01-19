@@ -1,9 +1,11 @@
 package com.demo.controller;
 
+import ch.qos.logback.core.pattern.color.BoldYellowCompositeConverter;
 import com.demo.entity.R;
 import com.demo.entity.User;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -43,4 +45,15 @@ public class IndexController {
         });
         return R.okData(map);
     }
+
+    @RequestMapping("/formData")
+    public Object formData(User user){
+        return R.okData(user);
+    }
+
+    @RequestMapping("/raw")
+    public Object raw(@RequestBody String body){
+        return R.okData(body);
+    }
+
 }
