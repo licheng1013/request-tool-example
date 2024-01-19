@@ -47,7 +47,7 @@ public class IndexController {
     }
 
     @RequestMapping("/formData")
-    public Object formData(User user){
+    public Object formData( User user){
         return R.okData(user);
     }
 
