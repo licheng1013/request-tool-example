@@ -20,22 +20,10 @@ public class IndexController {
         System.out.println("Message : " + message);
         return "index " + message;
     }
-
-    @RequestMapping("/json")
-    public Object json(String message) {
-        return R.okData(message);
-    }
-
-    @RequestMapping("/one")
-    public Object user(HttpServletRequest request) {
-        // 获取所有请求头
-        HashMap<String, String> map = new HashMap<>();
-        request.getHeaderNames().asIterator().forEachRemaining(key -> {
-            map.put(key, request.getHeader(key));
-        });
+    @RequestMapping("/info")
+    public Object user() {
         return R.okData(User.of());
     }
-
     @RequestMapping("/header")
     public Object header(HttpServletRequest request) {
         // 获取所有请求头
