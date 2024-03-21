@@ -1,6 +1,5 @@
 package com.demo.controller;
 
-import ch.qos.logback.core.pattern.color.BoldYellowCompositeConverter;
 import com.demo.entity.R;
 import com.demo.entity.User;
 import jakarta.servlet.http.HttpServletRequest;
@@ -33,8 +32,8 @@ public class IndexController {
         return R.okData(map);
     }
 
-    @PostMapping("/formData")
-    public Object formData(User user) {
+    @RequestMapping("/urlEncoded")
+    public Object urlEncoded(User user) {
         return R.okData(user);
     }
 
