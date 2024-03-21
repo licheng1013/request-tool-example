@@ -17,10 +17,12 @@ public class IndexController {
         System.out.println("Message : " + message);
         return "index " + message;
     }
+
     @RequestMapping("/info")
     public Object user() {
         return R.okData(User.of());
     }
+
     @RequestMapping("/header")
     public Object header(HttpServletRequest request) {
         // 获取所有请求头
@@ -32,12 +34,17 @@ public class IndexController {
     }
 
     @PostMapping("/formData")
-    public Object formData( User user){
+    public Object formData(User user) {
         return R.okData(user);
     }
 
-    @PostMapping("/raw")
-    public Object raw(@RequestBody String body){
+    @RequestMapping("/json")
+    public Object json(@RequestBody User user) {
+        return R.okData(user);
+    }
+
+    @RequestMapping(value = "/raw", method = {RequestMethod.DELETE, RequestMethod.POST, RequestMethod.PUT})
+    public Object raw(@RequestBody String body) {
         return R.okData(body);
     }
 
