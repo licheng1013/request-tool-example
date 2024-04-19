@@ -9,11 +9,10 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Objects;
 
 @RestController
 @RequestMapping("/user")
-public class IndexController {
+public class UserController {
 
     @RequestMapping("/index")
     public Object list(String message) {
