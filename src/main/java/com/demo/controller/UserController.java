@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @RequestMapping("/header")
-    public Object header(HttpServletRequest request) {
+        public Object header(HttpServletRequest request) {
         // 获取所有请求头
         HashMap<String, String> map = new HashMap<>();
         request.getHeaderNames().asIterator().forEachRemaining(key -> {
