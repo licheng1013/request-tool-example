@@ -25,6 +25,12 @@ public class UserController {
         return R.okData(User.of());
     }
 
+
+    @RequestMapping("/list")
+    public Object list() {
+        return R.okData(User.list());
+    }
+
     @RequestMapping("/header")
         public Object header(HttpServletRequest request) {
         // 获取所有请求头
